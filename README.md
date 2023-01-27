@@ -8,6 +8,8 @@
 - [¿Qué es Javascript y Para qué Sirve?](#¿qué-es-javascript-y-para-qué-sirve)
 - [Elementos de un Lenguaje de Programación: Variables, Funciones y Sintaxis](#elementos-de-un-lenguaje-de-programación-variables-funciones-y-sintaxis)
 - [Qué es una variable en Javascript](#qué-es-una-variable-en-javascript)
+- [Qué son las Funciones en Javascript](#qué-son-las-funciones-en-javascript)
+
 
 
 ## ¿Por qué Javascript?
@@ -162,7 +164,13 @@ Se puede declarar y asignar en una misma línea, sin repetir el nombre de la var
 ```Javascript
 var nombre = "JavaScript";
 var edad = 30; //Asigna una edad a la variable edad 
-var elementos = ["Computadora","Celular"]// Variable tipo array
+var elementos = ["Computadora","Celular"];// Variable tipo array
+var persona = {
+    nombre:"Diego",
+    edad:30
+} //Variable de tipo objeto 
+
+persona //Imprime directamente lo que tiene esa variable. 
 ```
 
 <h3>Cómo acceder a una variable</h3>
@@ -173,4 +181,93 @@ var nombre = "JavaScript"
 
 console.log(nombre) //"JavaScript"
 ```
+
+## Qué son las Funciones en Javascript
+
+Las **funciones** son bloques de código que solucionan un problema específico para ser reutilizados. Existen dos tipos de funciones: declarativas y expresivas.
+
+<h3>Qué son las funciones declarativas</h3>
+
+En JavaScript, las funciones declarativas se las declara con la palabra reservada ```function```.
+
+<h4>Cómo declarar una función declarativa</h4>
+
+La declaración de una función declarativa está constituido por las siguientes partes:
+
+* La **palabra reservada** ```function```.
+* El **nombre de la función:** el cual será guardado como referencia en memoria.
+* Los **parámetros:** están envueltas en paréntesis ```()```, son variables propias de la función y deberán utilizarse en el contenido. Hacen referencia a los argumentos en la invocación.
+* El **contenido:** está envuelto por llaves ```{}```, contendrá las líneas de código correspondientes a la lógica del problema.
+* El **valor retornado:** es un único valor que devuelve la función cuando es llamada. Se lo especifica por la palabra reservada ```return```. Si no existe, la función devolverá un valor undefined por defecto.
+```Javascript
+// Declaración
+function suma (a,b){
+    return a + b
+}
+/* 
+function nombre (parámetros) {
+    contenido
+    return valor
+} 
+*/
+```
+
+De esta manera, definimos la lógica de la función, pero no la estamos utilizando. Para generar los valores es necesario invocar la función en el código según sea necesario.
+
+<h3>Cómo invocar una función declarativa</h3>
+
+**La invocación o llamada es la manera que utilizan las funciones para utilizar el valor de retorno (```return```) según ciertos argumentos**. La invocación de la función declarativa está constituido por dos partes:
+
+* El **nombre** de la función especificada en la declaración.
+* Los **argumentos**, son los valores para cada uno de parámetros de la función envueltos entre paréntesis.
+```javAscript
+// Invocación
+suma(2,3)
+// nombre(argumentos)
+```
+
+La invocación sirve para emplear una función con diferentes argumentos y guardarlos en una variable.
+
+```JAVASCRIPT
+var resultado1 = suma(2,3)
+var resultado2 = suma(4,6)
+var resultado3 = suma(10,12)
+
+console.log(resultado1) //5
+console.log(resultado2) //10
+console.log(resultado3) //22
+```
+
+También existen funciones que simplemente se invocan, pero debes tener en cuenta que **retornan por defecto undefined**.
+```Javascript
+// Declaración
+function saludar(nombre){
+    console.log("Hola " + nombre) 
+}
+// Invocaciones
+saludar("JavaScript") //"Hola JavaScript"
+saludar("Platzi") // "Hola Platzi"
+```
+
+<h4>Plantillas literales</h4>
+
+También puedes utilizar las plantillas literales, una nueva característica del lenguaje para utilizar las variables dentro de ```${variable}``` entre las tildes invertidas ( `` ),
+```javascript
+console.log(`Hola ${nombre}`)
+```
+
+<h3>Qué son las funciones expresivas o anónimas</h3>
+
+Las funciones expresivas o anónimas consisten en guardar la función en una variable. Tienen la misma declaración e invocación que las funciones declarativas. La diferencia consiste en no especificar un nombre en la función, sino que utiliza el nombre de la variable.
+```Javascript
+// Declaración
+var suma = function (a, b) {
+  return a + b
+}
+// Invocación
+var resultado = suma(2, 2)
+
+console.log(resultado) //4
+```
+
 
