@@ -7,6 +7,7 @@
 - [¿Por qué Javascript?](#¿por-qué-javascript)
 - [¿Qué es Javascript y Para qué Sirve?](#¿qué-es-javascript-y-para-qué-sirve)
 - [Elementos de un Lenguaje de Programación: Variables, Funciones y Sintaxis](#elementos-de-un-lenguaje-de-programación-variables-funciones-y-sintaxis)
+- [Qué es una variable en Javascript](#qué-es-una-variable-en-javascript)
 
 
 ## ¿Por qué Javascript?
@@ -140,4 +141,35 @@ typeof console.log  // 'function'
 typeof {tipo: "objeto"} // 'object'
 typeof [1,2,3,4]  // 'object'
 ```
+
+## Qué es una variable en Javascript 
+
+Una **variable** es la representación de un lugar que reservamos en memoria para guardar un valor. El valor puede ser cualquier tipo de dato, inclusive objetos o funciones.
+
+<h3>Declaración y asignación de variables en JavaScript</h3>
+
+En JavaScript, una variable se crea con la palabra reservada var, seguido del nombre de la variable. Esto se denomina declaración.
+```Javascript
+var nombre
+```
+De esta manera, existirá un espacio en memoria que haga referencia a la variable nombre, pero por defecto tendrá un valor undefined.Para guardar un valor en esa variable, se utiliza el símbolo de igual ( =) , seguido del valor. Esto se denomina **asignación**.
+```Javascript
+var nombre;
+nombre = "JavaScript";
+```
+
+Se puede declarar y asignar en una misma línea, sin repetir el nombre de la variable. A esto se le dice inicializar una variable.
+```Javascript
+var nombre = "JavaScript";
+```
+
+<h3>Cómo acceder a una variable</h3>
+
+Una vez que hayas declarado y asignado un valor a una variable, ya puedes emplear en tu código usando su nombre, sin la necesidad de escribir nuevamente var.
+```Javascript
+var nombre = "JavaScript"
+
+console.log(nombre) //"JavaScript"
+```
+
 
