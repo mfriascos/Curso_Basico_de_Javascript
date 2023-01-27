@@ -161,6 +161,8 @@ nombre = "JavaScript";
 Se puede declarar y asignar en una misma línea, sin repetir el nombre de la variable. A esto se le dice inicializar una variable.
 ```Javascript
 var nombre = "JavaScript";
+var edad = 30; //Asigna una edad a la variable edad 
+var elementos = ["Computadora","Celular"]// Variable tipo array
 ```
 
 <h3>Cómo acceder a una variable</h3>
@@ -171,5 +173,4 @@ var nombre = "JavaScript"
 
 console.log(nombre) //"JavaScript"
 ```
-
 
