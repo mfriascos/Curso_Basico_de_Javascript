@@ -65,4 +65,5 @@ Sí, y la razón es que el navegador lee línea por línea nuestro código, el c
 
 <h3>Qué significa que Javascript es Backwards Compatible</h3>
 
-Todas las funciones nuevas que salen para Javascript no dañarán el trabajo ya hecho previamente, pero no se podrá utilizar en nuestro entorno de trabajo inmediatamente. Para solucionar esto está Babel, que permite usar las nuevas características del lenguaje, pero lo transforma a una versión que el navegador pueda entender.
+Todas las funciones nuevas que salen para Javascript no dañarán el trabajo ya hecho previamente, pero no se podrá utilizar en nuestro entorno de trabajo inmediatamente. Para solucionar esto está **Babel**, que permite usar las nuevas características del lenguaje, pero lo transforma a una versión que el navegador pueda entender.
+
